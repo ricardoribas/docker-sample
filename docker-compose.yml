@@ -1,0 +1,10 @@
+version: '2.2'
+services:
+  jenkins:
+    build: .
+    ports: 
+      - 8080:8080
+    container_name: docker-jenkins-sample
+    volumes: 
+      - /tmp/jenkins:/var/jenkins
+      - /var/run/docker.sock:/var/run/docker.sock
